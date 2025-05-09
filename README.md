@@ -116,12 +116,12 @@ TBA
 
 <!-- ROADMAP -->
 ## Roadmap
-
 - [ ] Github Setup for OSS 
-    - [ ] License
-    - [ ] README.MD
-    - [ ] Issues Template for Bugs
-    - [ ] Issues Template for Feature Requests
+    - [X] License
+    - [X] README.MD
+    - [X] Issues Template for Bugs
+    - [X] Issues Template for Feature Requests
+    - [ ] PR Template
 - [ ] App Setup
 - [ ] Email Integration
 - [ ] Canvas API
@@ -138,13 +138,14 @@ See the [open issues](https://github.com/KarolinaGroszewska/NudgEd/issues) for a
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+
 Don't forget to give the project a star! Thanks again!
 
 1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`) or your Bug Branch (`git checkout -b feature/AtrociousBug`)
+3. Commit your Changes (`git commit -m`)
+4. Push to the Branch (`git push origin`)
+5. Open a <a href="https://github.com/KarolinaGroszewska/NudgEd/pulls">Pull Request</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -164,7 +165,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
-TBA 
+For a list of helpful resources compiled for the viewers on Twitch, please visit the <a href="http://mlh.link/nudged-resources">Notion Page</a>. Thanks to everyone who tuned to any portion of my streams! 
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
