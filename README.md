@@ -26,7 +26,7 @@
 <h3 align="center">NudgEd</h3>
 
   <p align="center">
-  Automated grade monitoring and student reminders.
+  Automated grade monitoring and student reminders
     <br />
     <!-- <a href="https://github.com/KarolinaGroszewska/NudgEd"><strong>Explore the docs »</strong></a>
     <br /> -->
