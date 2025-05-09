@@ -31,11 +31,12 @@
     <!-- <a href="https://github.com/KarolinaGroszewska/NudgEd"><strong>Explore the docs »</strong></a>
     <br /> -->
     <br />
-    <a href="https://github.com/KarolinaGroszewska/NudgEd">View Demo</a>
+    <!-- <a href="https://github.com/KarolinaGroszewska/NudgEd">View Demo</a>
+    &middot; -->
+    <a href="https://github.com/KarolinaGroszewska/NudgEd/issues/new?template=bug_report.md">Report Bug</a>
     &middot;
-    <a href="https://github.com/KarolinaGroszewska/NudgEd/issues/new?template=feature_request.md">Report Bug</a>
-    &middot;
-    <a href="https://github.com/KarolinaGroszewska/NudgEd/issues/new?template=bug_report.md">Request Feature</a>
+    <a href="https://github.com/KarolinaGroszewska/NudgEd/issues/new?template=feature_request.md">Request Feature</a>
+
   </p>
 </div>
 
