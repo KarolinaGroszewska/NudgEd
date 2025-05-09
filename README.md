@@ -139,6 +139,8 @@ Contributions are what make the open source community such an amazing place to l
 
 If you have a suggestion that would make this better, please open an issue with the tag "enhancement". If you have written code for an issue, please open a pull request. 
 
+Please read our [contributing guidelines](https://github.com/KarolinaGroszewska/NudgEd/blob/main/contributing.md) before making a pull request. 
+
 Don't forget to give the project a star! Thanks again!
 
 1. Fork the Project
