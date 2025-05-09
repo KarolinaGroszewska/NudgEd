@@ -17,11 +17,11 @@
 
 
 <!-- PROJECT LOGO -->
-<br />
+<!-- <br /> -->
 <div align="center">
-  <a href="https://github.com/KarolinaGroszewska/NudgEd">
+  <!-- <a href="https://github.com/KarolinaGroszewska/NudgEd">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
+  </a> -->
 
 <h3 align="center">NudgEd</h3>
 
