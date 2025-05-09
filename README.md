@@ -116,12 +116,12 @@ TBA
 
 <!-- ROADMAP -->
 ## Roadmap
-- [ ] Github Setup for OSS 
+- [X] Github Setup for OSS 
     - [X] License
     - [X] README.MD
     - [X] Issues Template for Bugs
     - [X] Issues Template for Feature Requests
-    - [ ] PR Template
+    - [X] PR Template
 - [ ] App Setup
 - [ ] Email Integration
 - [ ] Canvas API
@@ -137,7 +137,7 @@ See the [open issues](https://github.com/KarolinaGroszewska/NudgEd/issues) for a
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+If you have a suggestion that would make this better, please open an issue with the tag "enhancement". If you have written code for an issue, please open a pull request. 
 
 Don't forget to give the project a star! Thanks again!
 
