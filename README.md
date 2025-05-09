@@ -26,7 +26,7 @@
 <h3 align="center">NudgEd</h3>
 
   <p align="center">
-    NudgED is an automated teacher grade tracker with email reminders for missing assignments and overall grades, connected to the Canvas API and built live on the MLH Twitch for GHW: May 2025 – OSS!
+    NudgEd is an automated teacher grade tracker with email reminders for missing assignments and overall grades, connected to the Canvas API and built live on the MLH Twitch for GHW: May 2025 – OSS!
     <br />
     <!-- <a href="https://github.com/KarolinaGroszewska/NudgEd"><strong>Explore the docs »</strong></a>
     <br /> -->
