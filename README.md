@@ -26,7 +26,7 @@
 <h3 align="center">NudgEd</h3>
 
   <p align="center">
-    NudgEd is an automated teacher grade tracker with email reminders for missing assignments and overall grades, connected to the Canvas API and built live on the MLH Twitch for GHW: May 2025 – OSS!
+  Automated grade monitoring and student reminders.
     <br />
     <!-- <a href="https://github.com/KarolinaGroszewska/NudgEd"><strong>Explore the docs »</strong></a>
     <br /> -->
@@ -70,19 +70,26 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## About the Project
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
-TBA
+**NudgEd** is an open-source, automated grade tracking system designed to support educators by streamlining student progress monitoring. 
+
+Built with integration to the Canvas LMS API, NudgEd automatically identifies missing assignments and grade thresholds, then sends personalized email reminders to students.
+
+NudgEd aims to reduce administrative overhead for teachers while encouraging timely student engagement through frequent accountability, improving classroom management and student-teacher relationships. 
+
+This project was developed live on the [MLH Twitch](https://twitch.tv/mlh) as part of **Global Hack Week: Open Source (May 2025)**. 
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 ### Built With
-
+<!-- 
 * [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
+* [![React][React.js]][React-url] -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
