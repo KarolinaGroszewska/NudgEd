@@ -33,9 +33,9 @@
     <br />
     <a href="https://github.com/KarolinaGroszewska/NudgEd">View Demo</a>
     &middot;
-    <a href="https://github.com/KarolinaGroszewska/NudgEd/issues/new?labels=bug&template=bug-report.md">Report Bug</a>
+    <a href="https://github.com/KarolinaGroszewska/NudgEd/issues/new?template=feature_request.md">Report Bug</a>
     &middot;
-    <a href="https://github.com/KarolinaGroszewska/NudgEd/issues/new?labels=enhancement&template=feature-request.md">Request Feature</a>
+    <a href="https://github.com/KarolinaGroszewska/NudgEd/issues/new?template=bug_report.md">Request Feature</a>
   </p>
 </div>
 
