@@ -1,8 +1,10 @@
 
-const express = require('express');
-const cors = require('cors');
+import express from 'express';
+import cors from 'cors';
+import connectToDB from './src/db.js'
 
 const app = express();
+connectToDB();
 app.use(cors());
 app.use(express.json());
 
