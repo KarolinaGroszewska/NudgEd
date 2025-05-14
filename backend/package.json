@@ -2,7 +2,10 @@
   "dependencies": {
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
-    "mongoose": "^8.14.3"
+    "express-session": "^1.18.1",
+    "mongoose": "^8.14.3",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.1",
@@ -12,6 +15,6 @@
     "typescript": "^5.8.3"
   },
   "scripts": {
-  "dev": "ts-node-dev --respawn server.ts"
+    "dev": "ts-node-dev --respawn server.ts"
   }
 }

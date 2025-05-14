@@ -2,6 +2,7 @@ import dotenv from 'dotenv';
 import express from 'express';
 import mongoose from 'mongoose';
 
+import adminRoutes from './routes/adminRoutes';
 import classRoutes from './routes/classRoutes';
 
 dotenv.config();
@@ -25,6 +26,7 @@ mongoose.connect(MONGODB_URI, {})
 });
 
 app.use('/api/classes', classRoutes);
+app.use('/api/admins', adminRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
