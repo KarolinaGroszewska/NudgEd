@@ -1,11 +1,14 @@
 import dotenv from 'dotenv';
 import express from 'express';
 import mongoose from 'mongoose';
-import passport from 'passport';
+import passport from './passport-setup';
 import session from 'express-session';
 
 import adminRoutes from './routes/adminRoutes';
 import classRoutes from './routes/classRoutes';
+
+import { isAuthenticated } from './middleware/isAuthenticated';
+
 
 dotenv.config();
 
@@ -34,8 +37,8 @@ mongoose.connect(MONGODB_URI, {})
     console.error('MongoDB connection error:', err);
 });
 
-app.use('/api/classes', classRoutes);
-app.use('/api/admins', adminRoutes);
+app.use('/api/classes', isAuthenticated, classRoutes);
+app.use('/api/admins', isAuthenticated, adminRoutes);
 
 app.get('/auth/google', passport.authenticate('google', {
   scope: ['profile', 'email']

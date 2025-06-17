@@ -1,6 +1,8 @@
 import passport from 'passport';
 import { Strategy as GoogleStrategy } from 'passport-google-oauth20';
-import AdminModel, { AdminDocument } from './models/Admin'; // Assuming Admin model is defined
+import AdminModel from './models/Admin'; // Assuming Admin model is defined
+
+require('dotenv').config();
 
 passport.use(new GoogleStrategy({
   clientID: process.env.GOOGLE_CLIENT_ID!,
@@ -28,18 +30,17 @@ passport.use(new GoogleStrategy({
     return done(error, undefined);  // In case of an error, pass it to done
   }
 }));
-passport.serializeUser((user: AdminDocument, done) => {
+passport.serializeUser((user: any, done) => {
   done(null, user.id); // user.id is now a virtual string
 });
 
 passport.deserializeUser(async (id: string, done) => {
   try {
-    const admin = await AdminModel.findById(id);
-    if (!admin) return done(null, false);
-
-    done(null, admin); // Now matches `User` type
+    const user = await AdminModel.findById(id);
+    done(null, user);
   } catch (err) {
     done(err, null);
   }
 });
+
 export default passport;
