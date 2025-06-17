@@ -4,7 +4,8 @@
     "module": "commonjs",
     "strict": true,
     "esModuleInterop": true,
-    "outDir": "./dist"
+    "outDir": "./dist",
+     "typeRoots": ["./node_modules/@types", "./types"]
   },
   "include": ["./"],
   "exclude": ["dist"]
