@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "express-session": "^1.18.1",
@@ -8,6 +9,7 @@
     "passport-google-oauth20": "^2.0.0"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.19",
     "@types/express": "^5.0.1",
     "@types/express-session": "^1.18.1",
     "@types/mongoose": "^5.11.96",

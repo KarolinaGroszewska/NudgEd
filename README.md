@@ -80,7 +80,7 @@ Built with integration to the Canvas LMS API, NudgEd automatically identifies mi
 
 NudgEd aims to reduce administrative overhead for teachers while encouraging timely student engagement through frequent accountability, improving classroom management and student-teacher relationships. 
 
-This project was developed live on the [MLH Twitch](https://twitch.tv/mlh) as part of **Global Hack Week: Open Source (May 2025)**. 
+This project was developed live on the [MLH Twitch](https://twitch.tv/mlh) as part of [**Global Hack Week**](https://ghw.mlh.io/), starting in May 2025. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
