@@ -1,23 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Dashboard.css";
-
-const DUMMY_STATS = {
-  studentsTracked: 35,
-  missingAssignments: 12,
-  remindersSent: 21,
-  belowThreshold: 6,
-};
-
-const DUMMY_AT_RISK = [
-  { name: "Jane Doe", missing: 2, grade: 64, status: "Low" },
-  { name: "John Smith", missing: 1, grade: 59, status: "Low" },
-];
-
-const DUMMY_ACTIVITY = [
-  "Reminder sent to Jane Doe",
-  "Reminder sent to John Smith",
-  "Assignment synced...",
-];
+import EditDashboard from "./EditDashboard";
 
 const StatCard: React.FC<{ label: string; value: number }> = ({ label, value }) => (
   <div className="notebook-stat-card">
@@ -27,33 +10,40 @@ const StatCard: React.FC<{ label: string; value: number }> = ({ label, value }) 
 );
 
 const Dashboard: React.FC = () => {
-  const [user, setUser] = useState<{ name: string } | null>(null);
+  const [user, setUser] = useState<{ name: string; dashboard: any } | null>(null);
+  const [showEditor, setShowEditor] = useState(false);
 
   useEffect(() => {
     fetch("http://localhost:3001/api/current_user", { credentials: "include" })
-      .then(res => {
-        if (res.status === 401) return null;
-        return res.json();
-      })
-      .then(data => {
-        if (data && data.user) setUser(data.user);
-        else setUser(null);
-      })
-      .catch(err => {
-        console.error("Failed to fetch user:", err);
-      });
-  }, []);
+      .then(res => res.status === 401 ? null : res.json())
+      .then(data => setUser(data && data.user ? data.user : null))
+      .catch(err => console.error("Failed to fetch user:", err));
+  }, [showEditor]); // re-fetch after editing
 
   const handleGoogleLogin = () => {
     window.open("http://localhost:3001/auth/google", "_self");
   };
 
+  // Use real data if available, fallback to 0/empty if not loaded
+  const dashboard = user?.dashboard || {
+    studentsTracked: 0,
+    missingAssignments: 0,
+    remindersSent: 0,
+    belowThreshold: 0,
+    atRisk: [],
+    activity: []
+  };
+
+  if (showEditor) {
+    return <EditDashboard onBack={() => setShowEditor(false)} />;
+  }
+
   return (
     <div className="notebook-bg">
       <div className="notebook-container">
         <div className="notebook-spiral" aria-hidden="true">
-          {[...Array(14)].map((_, i) => (
-            <div className="notebook-spiral-hole" key={i} />
+          {[...Array(13)].map((_, i) => (
+            <div className="notebook-spiral-coil" key={i} />
           ))}
         </div>
         <div className="notebook-page">
@@ -69,12 +59,27 @@ const Dashboard: React.FC = () => {
               )}
             </div>
           </header>
+          <button
+            style={{
+              background: "#2563eb",
+              color: "#fff",
+              border: "none",
+              borderRadius: 7,
+              padding: "6px 18px",
+              fontWeight: 600,
+              marginBottom: 12,
+              cursor: "pointer"
+            }}
+            onClick={() => setShowEditor(true)}
+          >
+            ✏️ Edit Dashboard
+          </button>
           <h2 className="notebook-subtitle">Automated grade monitoring and student reminders</h2>
           <section className="notebook-stats-row">
-            <StatCard label="Students Tracked" value={DUMMY_STATS.studentsTracked} />
-            <StatCard label="Missing Assignments" value={DUMMY_STATS.missingAssignments} />
-            <StatCard label="Reminders Sent" value={DUMMY_STATS.remindersSent} />
-            <StatCard label="Below Threshold" value={DUMMY_STATS.belowThreshold} />
+            <StatCard label="Students Tracked" value={dashboard.studentsTracked} />
+            <StatCard label="Missing Assignments" value={dashboard.missingAssignments} />
+            <StatCard label="Reminders Sent" value={dashboard.remindersSent} />
+            <StatCard label="Below Threshold" value={dashboard.belowThreshold} />
           </section>
           <section className="notebook-content-row">
             <div className="notebook-at-risk">
@@ -90,7 +95,7 @@ const Dashboard: React.FC = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {DUMMY_AT_RISK.map((student, idx) => (
+                  {(dashboard.atRisk || []).map((student: { name: string; missing: number; grade: number; status: string }, idx: number) => (
                     <tr key={idx}>
                       <td>{student.name}</td>
                       <td>{student.missing}</td>
@@ -106,13 +111,20 @@ const Dashboard: React.FC = () => {
               <div className="notebook-recent-activity">
                 <h3>Recent Activity</h3>
                 <ul>
-                  {DUMMY_ACTIVITY.map((activity, idx) => (
+                  {(dashboard.activity || []).map((activity: string, idx: number) => (
                     <li key={idx}>{activity}</li>
                   ))}
                 </ul>
               </div>
             </div>
-
+            <div className="notebook-quick-links">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="#">Connect Canvas</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Reports</a></li>
+              </ul>
+            </div>
           </section>
           <footer className="notebook-footer">
             <small>
