@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --main-blue: #2563eb;
+  --light-blue: #e6eeff;
+  --background-paper: #f8fbff;
+  --spiral-blue: #94b5ff;
+  --stat-card-blue: #e3edfd;
+  --stat-value-blue: #2563eb;
+  --header-text: #101828;
+  --subtitle-black: #101828;
+  --table-header-bg: #e6eeff;
+  --table-border: #b3cdf7;
+  --table-row-hover: #f0f6ff;
+  --quick-link-blue: #2563eb;
+  --nudge-btn-bg: #2563eb;
+  --nudge-btn-text: #fff;
+  --nudge-btn-hover: #1e40af;
+  --footer-bg: #e6eeff;
+}
+
+.notebook-bg {
+  background: var(--background-paper);
+  min-height: 100vh;
+  padding: 40px 0;
+}
+
+.notebook-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.notebook-spiral {
+  width: 32px;
+  background: linear-gradient(to bottom, var(--spiral-blue) 80%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 0;
+  box-shadow: 4px 0 6px -3px #b3cdf7;
+  border-radius: 16px 0 0 16px;
+}
+
+.notebook-spiral-hole {
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border: 2px solid var(--main-blue);
+  border-radius: 50%;
+  margin: 6px 0;
+  box-shadow: 1px 1px 3px #b3cdf7;
+}
+
+.notebook-page {
+  flex: 1;
+  background: #fff;
+  border-radius: 0 16px 16px 0;
+  box-shadow: 0 6px 24px rgba(37, 99, 235, 0.12);
+  border-left: 3px solid var(--spiral-blue);
+  min-width: 700px;
+  padding: 36px 48px 28px 40px;
+  position: relative;
+}
+
+.notebook-page h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: var(--main-blue);
+  letter-spacing: 0.01em;
+}
+
+.notebook-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 3px solid var(--light-blue);
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+
+.notebook-title {
+  font-family: 'Caveat', cursive;
+  font-size: 2.7rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--main-blue);
+  margin: 0;
+}
+
+.notebook-user {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  color: var(--header-text);
+  font-size: 1.1rem;
+  background: var(--light-blue);
+  border-radius: 7px;
+  padding: 6px 15px;
+  border: 1.5px solid var(--spiral-blue);
+  box-shadow: 0 2px 6px #e3edfd;
+}
+
+.notebook-login-btn {
+  background: var(--main-blue);
+  color: #fff;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 8px 18px;
+  border-radius: 7px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px #e3edfd;
+  transition: background 0.2s;
+  outline: none;
+}
+.notebook-login-btn:hover,
+.notebook-login-btn:focus {
+  background: var(--nudge-btn-hover);
+  outline: 2.5px solid var(--focus-outline);
+}
+
+.notebook-subtitle {
+  font-family: 'Caveat', cursive;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--subtitle-black);
+  margin: 18px 0 24px 0;
+  letter-spacing: 1.2px;
+}
+
+.notebook-stats-row {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+.notebook-stat-card {
+  background: var(--stat-card-blue);
+  border-radius: 9px;
+  box-shadow: 0 2px 8px #e3edfd;
+  padding: 18px 14px;
+  flex: 1;
+  text-align: center;
+  border: 1.5px solid var(--spiral-blue);
+  margin-bottom: 6px;
+}
+.notebook-stat-value {
+  font-family: 'Caveat', cursive;
+  font-size: 2.1rem;
+  color: var(--stat-value-blue);
+  margin-bottom: 4px;
+}
+.notebook-stat-label {
+  font-family: 'Inter', sans-serif;
+  color: var(--header-text);
+  font-weight: 500;
+  font-size: 1.05rem;
+}
+
+.notebook-content-row {
+  display: flex;
+  gap: 38px;
+  margin-top: 10px;
+}
+.notebook-at-risk {
+  flex: 2;
+}
+.notebook-quick-links {
+  flex: 1;
+  background: var(--light-blue);
+  border: 1.5px solid var(--spiral-blue);
+  border-radius: 9px;
+  box-shadow: 0 2px 8px #e3edfd;
+  padding: 20px 18px;
+  min-width: 190px;
+  margin-top: 6px;
+}
+
+.notebook-quick-links ul {
+  list-style: none;
+  padding: 0 0 0 2px;
+  margin: 0;
+}
+.notebook-quick-links li {
+  margin-bottom: 14px;
+}
+.notebook-quick-links a {
+  color: var(--quick-link-blue);
+  font-family: 'Caveat', cursive;
+  font-size: 1.18rem;
+  text-decoration: none;
+  border-bottom: 1px dotted var(--main-blue);
+  transition: color 0.16s;
+}
+.notebook-quick-links a:hover,
+.notebook-quick-links a:focus {
+  color: var(--accent-orange);
+  outline: 2px solid var(--focus-outline);
+}
+
+.notebook-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #fff;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 18px;
+  box-shadow: 0 1px 6px #e3edfd;
+  border: 1.5px solid var(--table-border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.notebook-table th, .notebook-table td {
+  padding: 8px 10px;
+  text-align: left;
+  border-bottom: 1px solid var(--table-border);
+}
+.notebook-table th {
+  background: var(--table-header-bg);
+  font-family: 'Caveat', cursive;
+  color: var(--main-blue);
+  font-size: 1.08rem;
+  font-weight: 600;
+  border-bottom: 2px solid var(--table-border);
+}
+.notebook-table tr:last-child td {
+  border-bottom: none;
+}
+.notebook-table tr:hover {
+  background: var(--table-row-hover);
+}
+.notebook-nudge-btn {
+  background: var(--nudge-btn-bg);
+  color: var(--nudge-btn-text);
+  border: none;
+  border-radius: 7px;
+  padding: 5px 13px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 1px 2px #b3cdf7;
+  transition: background 0.2s;
+  outline: none;
+}
+.notebook-nudge-btn:hover,
+.notebook-nudge-btn:focus {
+  background: var(--nudge-btn-hover);
+  outline: 2px solid var(--focus-outline);
+}
+
+.notebook-recent-activity {
+  margin-top: 32px;
+}
+.notebook-recent-activity ul {
+  margin: 0;
+  padding-left: 20px;
+  font-family: 'Inter', sans-serif;
+  color: var(--header-text);
+}
+
+.notebook-footer {
+  text-align: center;
+  color: #3b3b3b;
+  border-top: 2px solid var(--light-blue);
+  background: var(--footer-bg);
+  margin-top: 28px;
+  padding-top: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.97rem;
+}
+.notebook-footer a {
+  color: var(--main-blue);
+  text-decoration: underline;
+}
+.notebook-footer a:focus {
+  outline: 2px solid var(--focus-outline);
+}
